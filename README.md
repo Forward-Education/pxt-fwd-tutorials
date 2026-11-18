@@ -15,3 +15,5 @@ https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutoria
 If you would like to open a tutorial in this extension, then use the above formula to build the link and launch it.
 
 A tutorial may be micro:bit v2 only if it includes an extension that is v2 only.
+
+You can find our products at https://forwardedu.com and learning materials at https://learn.forwardedu.com.
