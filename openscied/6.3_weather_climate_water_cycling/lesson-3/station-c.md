@@ -54,8 +54,8 @@ basic.forever(function () {
 })
 ```
 
-## Lesson 3 - Sensor Station C (Light) @showdialog
+## Lesson 3 - Sensor Station C (Light)
 
-This project already has the code for **Sensor Station C (Light)**.
+This project has the code for **Sensor Station C (Light)**.
 
 Click **Done**, then download the code to your micro:bit.

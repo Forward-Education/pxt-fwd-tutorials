@@ -68,8 +68,8 @@ basic.forever(function () {
 })
 ```
 
-## Lesson 5 - Dual Light and Temperature Sensors @showdialog
+## Lesson 5 - Dual Light and Temperature Sensors
 
-This project already has the code for **Dual Light and Temperature Sensors**.
+This project has the code for **Dual Light and Temperature Sensors**.
 
 Click **Done**, then download the code to your micro:bit.

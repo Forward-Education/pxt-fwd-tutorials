@@ -25,8 +25,8 @@ basic.showLeds(`
     `)
 ```
 
-## Lesson 12 - Pressure Radio Receiver @showdialog
+## Lesson 12 - Pressure Radio Receiver
 
-This project already has the code for **Pressure Radio Receiver**.
+This project has the code for **Pressure Radio Receiver**.
 
 Click **Done**, then download the code to your micro:bit.

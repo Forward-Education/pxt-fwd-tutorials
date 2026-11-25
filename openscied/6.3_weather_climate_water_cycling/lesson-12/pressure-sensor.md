@@ -28,8 +28,8 @@ basic.forever(function () {
 })
 ```
 
-## Lesson 12 - Pressure Sensor @showdialog
+## Lesson 12 - Pressure Sensor
 
-This project already has the code for **Pressure Sensor**.
+This project has the code for **Pressure Sensor**.
 
 Click **Done**, then download the code to your micro:bit.

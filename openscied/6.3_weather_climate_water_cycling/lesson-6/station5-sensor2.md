@@ -43,8 +43,8 @@ basic.forever(function () {
 })
 ```
 
-## Lesson 6 - Station 5, Sensor 2 @showdialog
+## Lesson 6 - Station 5, Sensor 2
 
-This project already has the code for **Station 5, Sensor 2**.
+This project has the code for **Station 5, Sensor 2**.
 
 Click **Done**, then download the code to your micro:bit.

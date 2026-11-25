@@ -50,8 +50,8 @@ radio.setGroup(radiogroupnumber)
 basic.showString("" + (radiogroupnumber))
 ```
 
-## Lesson 6 - Station 3 Receiver @showdialog
+## Lesson 6 - Station 3 Receiver
 
-This project already has the code for **Station 3 Receiver**.
+This project has the code for **Station 3 Receiver**.
 
 Click **Done**, then download the code to your micro:bit.

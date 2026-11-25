@@ -55,8 +55,8 @@ basic.forever(function () {
 })
 ```
 
-## Lesson 3 - Sensor Station B (Humidity) @showdialog
+## Lesson 3 - Sensor Station B (Humidity)
 
-This project already has the code for **Sensor Station B (Humidity)**.
+This project has the code for **Sensor Station B (Humidity)**.
 
 Click **Done**, then download the code to your micro:bit.

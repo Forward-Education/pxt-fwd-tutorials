@@ -60,8 +60,8 @@ basic.forever(function () {
 })
 ```
 
-## Lesson 3 - Sensor Station A (Temperature) @showdialog
+## Lesson 3 - Sensor Station A (Temperature)
 
-This project already has the code for **Sensor Station A (Temperature)**.
+This project has the code for **Sensor Station A (Temperature)**.
 
 Click **Done**, then download the code to your micro:bit.
