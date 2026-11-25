@@ -8,13 +8,6 @@ openscied=github:Forward-Education/pxt-openscied#v1.1.0
 ```
 
 ```template
-function readandconverttemperature () {
-    temperatureC = opensciedModules.temperature1.readTemperature()
-    temperatureF = temperatureC * 1.8 + 32
-    output = inputcurrent
-    output = Math.trunc(inputcurrent * 10)
-    output = output / 10
-}
 input.onButtonPressed(Button.A, function () {
     basic.showIcon(IconNames.Yes)
     basic.pause(500)
@@ -29,10 +22,7 @@ input.onButtonPressed(Button.AB, function () {
     logging = false
     basic.showIcon(IconNames.Happy)
 })
-let inputcurrent = 0
 let output = 0
-let temperatureF = 0
-let temperatureC = 0
 let columnname = ""
 let scrolldisplay = false
 let logging = false
@@ -47,8 +37,7 @@ basic.showLeds(`
     . . # . .
     `)
 basic.forever(function () {
-    inputcurrent = temperatureF
-    readandconverttemperature()
+    output = opensciedModules.round(opensciedModules.temperature1.readTemperature(opensciedEnums.TemperatureUnit.Fahrenheit), 1)
     if (logging == true) {
         datalogger.log(datalogger.createCV(columnname, output))
         datalogger.mirrorToSerial(true)

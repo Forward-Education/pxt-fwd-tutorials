@@ -45,6 +45,7 @@ let outputchoice = ""
 let duration = 0
 let station = ""
 opensciedModules.initializeLcd()
+opensciedModules.solar1.setSamplingRate(opensciedEnums.SamplingRate.Fast)
 opensciedModules.lcd1.printLineString("press A or B", 1)
 opensciedModules.lcd1.printLineString("              ", 2)
 station = "L"

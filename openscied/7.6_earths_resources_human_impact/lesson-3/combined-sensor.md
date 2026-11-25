@@ -9,10 +9,7 @@ openscied=github:Forward-Education/pxt-openscied#v1.1.0
 
 ```template
 function calcAbsHumidity () {
-    abshumidityfactor = 13.247 * (inputcurrenthumidity / (273.15 + inputcurrenttemp))
-    abshumidityexponent = 2.7183 ** (17.67 * inputcurrenttemp / (243.5 + inputcurrenttemp))
-    abshumidityinitial = abshumidityfactor * abshumidityexponent
-    abshumidityrounded = Math.round(abshumidityinitial * 100) / 100
+    abshumidityrounded = opensciedModules.round(opensciedModules.bmeHumidity.absoluteHumidity(), 2)
 }
 input.onButtonPressed(Button.A, function () {
     outputchoice = "A"
@@ -33,11 +30,8 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 })
 let inputcurrentsoil = 0
 let abshumidityrounded = 0
-let abshumidityinitial = 0
-let abshumidityexponent = 0
 let inputcurrenttemp = 0
 let inputcurrenthumidity = 0
-let abshumidityfactor = 0
 let outputchoice = ""
 outputchoice = "station"
 basic.showIcon(IconNames.Yes)

@@ -8,10 +8,7 @@ openscied=github:Forward-Education/pxt-openscied#v1.1.0
 
 ```template
 function calcAbsHumidity () {
-    abshumidityfactor = 13.247 * (opensciedModules.bmeHumidity.humidity() / (273.15 + opensciedModules.bmeTemperature.readTemperature()))
-    abshumidityexponent = 2.7183 ** (17.67 * opensciedModules.bmeTemperature.readTemperature() / (243.5 + opensciedModules.bmeTemperature.readTemperature()))
-    abshumidityinitial = abshumidityfactor * abshumidityexponent
-    abshumidityrounded = Math.round(abshumidityinitial * 100) / 100
+    abshumidityrounded = opensciedModules.round(opensciedModules.bmeHumidity.absoluteHumidity(), 2)
 }
 input.onButtonPressed(Button.A, function () {
     basic.showString("" + (sensornumber))
@@ -23,9 +20,6 @@ input.onButtonPressed(Button.B, function () {
     datasendstate = 0
 })
 let abshumidityrounded = 0
-let abshumidityinitial = 0
-let abshumidityexponent = 0
-let abshumidityfactor = 0
 let datasendstate = 0
 let sensornumber = 0
 let radiogroupnumber = 0

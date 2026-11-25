@@ -40,7 +40,7 @@ basic.showLeds(`
     `)
 basic.forever(function () {
     inputcurrent = opensciedModules.light1.illuminance()
-    luxrounded = Math.round(inputcurrent * 10) / 10
+    luxrounded = opensciedModules.round(inputcurrent, 1)
     output = luxrounded
     if (logging == true) {
         datalogger.log(datalogger.createCV(columnname, output))

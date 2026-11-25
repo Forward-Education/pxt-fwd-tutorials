@@ -8,11 +8,6 @@ openscied=github:Forward-Education/pxt-openscied#v1.1.0
 ```
 
 ```template
-function readandconverttemperature () {
-    temperatureC = opensciedModules.bmeTemperature.readTemperature()
-    temperatureF = temperatureC * 1.8 + 32
-    tempoutput = Math.trunc(temperatureF * 10) / 10
-}
 input.onButtonPressed(Button.A, function () {
     displaystate = 1
     basic.clearScreen()
@@ -44,20 +39,18 @@ function cyclemenuchoice () {
 }
 let lightintensity = 0
 let tempoutput = 0
-let temperatureF = 0
-let temperatureC = 0
 let displaystate = 0
 let stationlabel = "1.a"
 displaystate = 0
 basic.forever(function () {
     lightintensity = opensciedModules.light1.illuminance()
-    readandconverttemperature()
+    tempoutput = opensciedModules.round(opensciedModules.bmeTemperature.readTemperature(opensciedEnums.TemperatureUnit.Fahrenheit), 1)
     if (displaystate == 0) {
         cyclemenuchoice()
     }
     if (displaystate == 1) {
         basic.showString("Li:")
-        basic.showString("" + (Math.trunc(lightintensity * 10) / 10))
+        basic.showString("" + (opensciedModules.round(lightintensity, 1)))
         basic.clearScreen()
     }
     if (displaystate == 2) {
