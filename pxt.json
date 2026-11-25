@@ -393,7 +393,22 @@
         "fwd/smart-solar/_locales/fr/curriculum/ms-solartracking/modify.md",
         "fwd/smart-solar/_locales/fr/curriculum/ms-solartracking/use.md",
         "fwd/smart-solar/_locales/fr/curriculum/projects/current-monitor/tutorial-v2.md",
-        "fwd/smart-solar/_locales/fr/curriculum/projects/current-monitor/tutorial.md"
+        "fwd/smart-solar/_locales/fr/curriculum/projects/current-monitor/tutorial.md",
+        "openscied/6.3_weather_climate_water_cycling/lesson-3/station-a.md",
+        "openscied/6.3_weather_climate_water_cycling/lesson-3/station-b.md",
+        "openscied/6.3_weather_climate_water_cycling/lesson-3/station-c.md",
+        "openscied/6.3_weather_climate_water_cycling/lesson-5/dual-light-temp.md",
+        "openscied/6.3_weather_climate_water_cycling/lesson-6/station3-sensor1.md",
+        "openscied/6.3_weather_climate_water_cycling/lesson-6/station3-sensor2.md",
+        "openscied/6.3_weather_climate_water_cycling/lesson-6/station3-receiver.md",
+        "openscied/6.3_weather_climate_water_cycling/lesson-6/station4-sensor1.md",
+        "openscied/6.3_weather_climate_water_cycling/lesson-6/station4-sensor2.md",
+        "openscied/6.3_weather_climate_water_cycling/lesson-6/station4-receiver.md",
+        "openscied/6.3_weather_climate_water_cycling/lesson-6/station5-sensor1.md",
+        "openscied/6.3_weather_climate_water_cycling/lesson-6/station5-sensor2.md",
+        "openscied/6.3_weather_climate_water_cycling/lesson-6/station5-receiver.md",
+        "openscied/6.3_weather_climate_water_cycling/lesson-12/pressure-sensor.md",
+        "openscied/6.3_weather_climate_water_cycling/lesson-12/pressure-receiver.md"
     ],
     "public": true,
     "targetVersions": {
