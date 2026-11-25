@@ -4,12 +4,12 @@
 radio=radio
 microphone=microphone
 datalogger=datalogger
-openscied=github:Forward-Education/pxt-openscied#v0.0.6
+openscied=github:Forward-Education/pxt-openscied#v1.1.0
 ```
 
 ```template
 function readandconverttemperature () {
-    temperatureC = opensciedModules.temperature1.temperature()
+    temperatureC = opensciedModules.temperature1.readTemperature()
     temperatureF = temperatureC * 1.8 + 32
     output = inputcurrent
     output = Math.trunc(inputcurrent * 10)

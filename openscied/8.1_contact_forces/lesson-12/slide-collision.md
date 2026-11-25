@@ -3,8 +3,7 @@
 ```package
 radio=radio
 microphone=microphone
-openscied=github:Forward-Education/pxt-openscied#v1.0.0
-all-fwd-blocks=github:forward-education/pxt-all-fwd-blocks#v2.0.1
+openscied=github:Forward-Education/pxt-openscied#v1.1.0
 ```
 
 ```template

@@ -3,8 +3,7 @@
 ```package
 radio=radio
 microphone=microphone
-openscied=github:Forward-Education/pxt-openscied#v1.0.0
-all-fwd-blocks=github:forward-education/pxt-all-fwd-blocks#v2.0.1
+openscied=github:Forward-Education/pxt-openscied#v1.1.0
 ```
 
 ```template
@@ -17,7 +16,7 @@ input.onButtonPressed(Button.AB, function () {
     // duration is the total time that the light detector was in the dark
     outputchoice = "station"
     // The value for Bbight/full light is stored right now.
-    initiallightvalue = fwdSensors.solar1.lightLevel()
+    initiallightvalue = opensciedModules.solar1.lightLevel()
     basic.showString(station)
     opensciedModules.lcd1.clearScreen()
 })
@@ -29,7 +28,7 @@ input.onButtonPressed(Button.B, function () {
     endtime = 0
     // resets the time it was in the dark
     duration = 0
-    initiallightvalue = fwdSensors.solar1.lightLevel()
+    initiallightvalue = opensciedModules.solar1.lightLevel()
     highlightvalue = initiallightvalue * 0.9
     lowlightvalue = initiallightvalue * 0.6
     basic.showIcon(IconNames.Heart)
@@ -54,8 +53,8 @@ duration = 0
 outputchoice = "station"
 basic.showString(station)
 basic.forever(function () {
-    sensorinput = fwdSensors.solar1.lightLevel()
-    serial.writeValue("sensor input", fwdSensors.round(sensorinput, 2))
+    sensorinput = opensciedModules.solar1.lightLevel()
+    serial.writeValue("sensor input", opensciedModules.round(sensorinput, 2))
     if (outputchoice == "A") {
         led.plotBarGraph(
         sensorinput,

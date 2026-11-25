@@ -4,7 +4,7 @@
 radio=radio
 microphone=microphone
 datalogger=datalogger
-openscied=github:Forward-Education/pxt-openscied#v0.0.6
+openscied=github:Forward-Education/pxt-openscied#v1.1.0
 ```
 
 ```template

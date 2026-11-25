@@ -4,13 +4,13 @@
 radio=radio
 microphone=microphone
 datalogger=datalogger
-openscied=github:Forward-Education/pxt-openscied#v0.0.6
+openscied=github:Forward-Education/pxt-openscied#v1.1.0
 ```
 
 ```template
 function calcAbsHumidity () {
-    abshumidityfactor = 13.247 * (opensciedModules.bmeHumidity.humidity() / (273.15 + opensciedModules.bmeTemperature.temperature()))
-    abshumidityexponent = 2.7183 ** (17.67 * opensciedModules.bmeTemperature.temperature() / (243.5 + opensciedModules.bmeTemperature.temperature()))
+    abshumidityfactor = 13.247 * (opensciedModules.bmeHumidity.humidity() / (273.15 + opensciedModules.bmeTemperature.readTemperature()))
+    abshumidityexponent = 2.7183 ** (17.67 * opensciedModules.bmeTemperature.readTemperature() / (243.5 + opensciedModules.bmeTemperature.readTemperature()))
     abshumidityinitial = abshumidityfactor * abshumidityexponent
     abshumidityrounded = Math.round(abshumidityinitial * 100) / 100
 }

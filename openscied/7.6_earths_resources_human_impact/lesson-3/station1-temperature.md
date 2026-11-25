@@ -4,7 +4,7 @@
 radio=radio
 microphone=microphone
 datalogger=datalogger
-openscied=github:Forward-Education/pxt-openscied#v0.0.6
+openscied=github:Forward-Education/pxt-openscied#v1.1.0
 ```
 
 ```template
@@ -30,7 +30,7 @@ station_number = 1
 outputchoice = "station"
 basic.showNumber(station_number)
 basic.forever(function () {
-    inputcurrent = opensciedModules.bmeTemperature.temperature()
+    inputcurrent = opensciedModules.bmeTemperature.readTemperature()
     if (outputchoice == "A") {
         led.plotBarGraph(
         inputcurrent,

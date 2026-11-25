@@ -4,7 +4,7 @@
 radio=radio
 microphone=microphone
 datalogger=datalogger
-openscied=github:Forward-Education/pxt-openscied#v0.0.6
+openscied=github:Forward-Education/pxt-openscied#v1.1.0
 ```
 
 ```template
@@ -25,7 +25,7 @@ let outputchoice = ""
 outputchoice = "station"
 basic.showIcon(IconNames.Yes)
 basic.forever(function () {
-    inputcurrenttemp = opensciedModules.bmeTemperature.temperature()
+    inputcurrenttemp = opensciedModules.bmeTemperature.readTemperature()
     if (outputchoice == "A" || outputchoice == "B") {
         basic.showNumber(inputcurrenttemp)
         serial.writeValue("temp data from micro:bit", inputcurrenttemp)
