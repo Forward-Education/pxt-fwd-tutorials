@@ -2,22 +2,17 @@
 
 ```package
 radio=radio
-microphone=microphone
 ```
 
 ```template
-// Sends each reading to the computer right away and remembers it for the screen.
-// The top-left light blinks for each reading.
+input.onButtonPressed(Button.B, function () {
+    basic.showString("" + (radiogroupnumber))
+})
 radio.onReceivedValue(function (name, value) {
     serial.writeValue(name, value)
-    pressure = value
-    received = true
-    led.toggle(0, 0)
+    basic.showString("" + (value))
 })
-let received = false
-let pressure = 0
 let radiogroupnumber = 0
-received = false
 radiogroupnumber = 12
 radio.setGroup(radiogroupnumber)
 basic.showLeds(`
@@ -27,30 +22,30 @@ basic.showLeds(`
     . # . . .
     . # . . .
     `)
-// Scrolls the latest reading on the screen.
-// Scrolling takes a few seconds, so it runs in its own loop
-// to keep it from holding up incoming readings.
-basic.forever(function () {
-    if (received) {
-        basic.showNumber(pressure)
-    }
-})
 ```
 
 ## Lesson 12 - Pressure Radio Receiver
 
-This project has the code for **Pressure Radio Receiver**.
+This project has the code for **Pressure Radio Receiver**. It matches the code students read on the lesson slides.
 
 ## How to use the code
 
-When the micro:bit starts, it shows a **P** for pressure. Keep it connected to the computer by USB to see the data in the data viewer.
+When the micro:bit starts, it shows a **P** for pressure. Keep it connected to the computer by USB and open **Show data** to graph the pressure.
 
-- Each reading from the sensor goes to the computer right away.
-- The latest reading scrolls on the screen.
-- The top-left light blinks each time a reading comes in. If it stops blinking, check the sensor.
+- Each reading from the sensor goes to the computer and scrolls on the screen.
+- Press **B** to show the radio group number (12).
 
 ## Technical notes
 
-The radio block only saves the reading and sends it to the computer. Scrolling the reading happens in a separate ``||basic:forever||`` loop. Scrolling text takes a few seconds, so if it happened in the radio block, readings could pile up or get lost while the screen was busy.
+The receiver listens on radio group **12**. The sensor micro:bit must use the same group.
+
+When a reading arrives, the ``||radio:on radio received||`` block does two things:
+
+1. ``||serial:serial write value||`` sends the name and the number to the computer. This is what **Show data** graphs.
+2. ``||basic:show string||`` scrolls the number on the screen.
+
+The number scrolls inside the radio block, and scrolling takes a few seconds. Readings that arrive during a scroll wait in a queue, so the screen can fall behind the sensor. Each queued reading is still sent to the computer, so the graph in **Show data** gets them all, even if some arrive a little late. Use the graph, not the screen, for your data.
+
+This code is kept the same as the code on the lesson slides.
 
 Click **Done**, then download the code to your micro:bit.

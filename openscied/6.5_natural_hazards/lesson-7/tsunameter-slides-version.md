@@ -64,4 +64,22 @@ basic.forever(function () {
 
 This project has the code for **Tsunameter (Slides Version)**.
 
+## How to use the code
+
+This micro:bit is a tsunameter. It uses the compass (magnetometer) to measure how high a magnet on the water rises. Keep it connected to the computer by USB and open **Show data** to graph the height.
+
+- At the start, it shows **L** (local mode).
+- With the water still, press **A** to set the zero level. It shows **-** and plays a short tone.
+- Press **B** to switch between **L** (local) and **W** (warning) mode.
+- In **W** mode, a **!** shows every 2 seconds if the height is above the zero level. The height is only measured in **L** mode (see the technical notes).
+- Touch the logo to check for a warning by hand (micro:bit V2 only).
+
+## Technical notes
+
+- The forever loop reads the magnetic strength, takes the cube root and multiplies by 1000. It subtracts the zero level set with **A** to get the height.
+- The height is only updated in **L** mode. In **W** mode the height stays at the last local value.
+- The forever loop sends the height to the computer as **Height** as fast as it can, in both modes.
+- The highest height is kept and checked every 2 seconds, then reset to 0. Any height above 0 counts as a warning.
+- The radio uses group **1**. In **W** mode, a radio number sets the height. This is the version on the lesson slides.
+
 Click **Done**, then download the code to your micro:bit.

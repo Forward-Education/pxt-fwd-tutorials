@@ -10,15 +10,8 @@ One-step tutorials that load each OpenSciEd program into MakeCode. Generated fro
 | 3 | station-b | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-3/station-b |
 | 3 | station-c | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-3/station-c |
 | 5 | dual-light-temp | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-5/dual-light-temp |
-| 6 | station3-sensor1 | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-6/station3-sensor1 |
-| 6 | station3-sensor2 | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-6/station3-sensor2 |
-| 6 | station3-receiver | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-6/station3-receiver |
-| 6 | station4-sensor1 | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-6/station4-sensor1 |
-| 6 | station4-sensor2 | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-6/station4-sensor2 |
-| 6 | station4-receiver | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-6/station4-receiver |
-| 6 | station5-sensor1 | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-6/station5-sensor1 |
-| 6 | station5-sensor2 | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-6/station5-sensor2 |
-| 6 | station5-receiver | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-6/station5-receiver |
+| 6 | humidity-sender | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-6/humidity-sender |
+| 6 | humidity-receiver | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-6/humidity-receiver |
 | 12 | pressure-sensor | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-12/pressure-sensor |
 | 12 | pressure-receiver | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/6.3_weather_climate_water_cycling/lesson-12/pressure-receiver |
 
@@ -51,6 +44,7 @@ One-step tutorials that load each OpenSciEd program into MakeCode. Generated fro
 | 11 | carbon-dice-game | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/7.6_earths_resources_human_impact/lesson-11/carbon-dice-game |
 | 16 | water-pump-soil-moisture | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/7.6_earths_resources_human_impact/lesson-16/water-pump-soil-moisture |
 | 16 | water-pump-soil-moisture-radio | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/7.6_earths_resources_human_impact/lesson-16/water-pump-soil-moisture-radio |
+| 16 | water-pump-receiver | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/7.6_earths_resources_human_impact/lesson-16/water-pump-receiver |
 
 ## 8.1_contact_forces
 
@@ -66,6 +60,9 @@ One-step tutorials that load each OpenSciEd program into MakeCode. Generated fro
 | 12 | accelerometer-collision | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/8.1_contact_forces/lesson-12/accelerometer-collision |
 | 12 | dial-collision | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/8.1_contact_forces/lesson-12/dial-collision |
 | 12 | slide-collision | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/8.1_contact_forces/lesson-12/slide-collision |
+| 12 | accelerometer-create | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/8.1_contact_forces/lesson-12/accelerometer-create |
+| 12 | dial-create | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/8.1_contact_forces/lesson-12/dial-create |
+| 12 | slide-create | https://makecode.microbit.org/#tutorial:github:forward-education/pxt-fwd-tutorials/openscied/8.1_contact_forces/lesson-12/slide-create |
 
 ## 8.2_sound_waves
 

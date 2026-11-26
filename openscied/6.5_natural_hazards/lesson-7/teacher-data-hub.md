@@ -70,4 +70,24 @@ status = "-"
 
 This project has the code for **Teacher Data Hub**.
 
+## How to use the code
+
+This micro:bit controls the buoy sensors and collects their data. Keep it connected to the computer by USB and open **Show data**.
+
+- At the start, it shows **+**. Nothing is graphed yet.
+- Press **A** to start mode A. It sends **A** to the sensors, and each sensor's reading is graphed as its own line (**Sensor 0**, **Sensor 1**).
+- Press **B** to start mode B. It sends **B** to the sensors. The sensors stop on their own after a wave passes, and the hub graphs both sensors together.
+- Press **A+B** to stop. It sends **X** to the sensors, shows an X, and stops graphing.
+
+A check mark shows when the hub has heard that both sensors have finished.
+
+## Technical notes
+
+- All micro:bits use radio group **1**.
+- The sensors send their readings as radio values named **0** and **1** (the sensor ID).
+- In mode A, each reading is sent to the computer as soon as it arrives, with the label **Sensor 0** or **Sensor 1**.
+- In mode B, the hub keeps the latest value from each sensor. Each time either sensor sends, the hub sends both values as one row of two numbers. This keeps the two sensors lined up in time.
+- Pressing **A**, **B** or **A+B** resets both values to 0 and clears the "finished" flags.
+- When a sensor finishes, it sends its ID as a radio number. The hub shows the check mark only after it gets both **1** and **2**.
+
 Click **Done**, then download the code to your micro:bit.

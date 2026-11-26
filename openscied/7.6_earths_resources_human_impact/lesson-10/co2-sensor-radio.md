@@ -45,4 +45,24 @@ basic.forever(function () {
 
 This project has the code for **CO2 Sensor with Radio (Example)**.
 
+## How to use the code
+
+This is an example of the CO2 sensor code with radio sending. Keep the micro:bit connected to the computer by USB and open **Show data** to graph the readings.
+
+- At the start, a check mark shows. No data is sent yet.
+- Press **A** to read CO2. The value scrolls, goes to the computer and is sent by radio.
+- Press **B** to read humidity. The value scrolls, goes to the computer and is sent by radio.
+- Press **A+B** to stop sending data.
+
+Use the **Lesson 10 - Radio Receiving** code on a second micro:bit, and press **A** on it to listen on group 1.
+
+## Technical notes
+
+- The radio uses group **1**.
+- CO2 comes from the eCO2 sensor in parts per million (ppm). Humidity comes from the BME280 sensor in %.
+- The radio value is named **CO2:** in mode A and **Humidity** in mode B.
+- The forever loop takes one reading, scrolls it, then waits 5 seconds. With the scroll time, readings are about 6 to 8 seconds apart.
+- A button press takes effect on the next pass through the loop, so it can take a few seconds.
+- Unlike the CO2 Sensor code, **A+B** does not show a check mark. The screen keeps scrolling the last reading, but nothing is sent. Before you press **A** or **B** for the first time, it scrolls **0**.
+
 Click **Done**, then download the code to your micro:bit.

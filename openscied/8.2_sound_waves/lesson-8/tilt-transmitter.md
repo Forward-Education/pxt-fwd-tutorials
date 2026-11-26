@@ -2,8 +2,6 @@
 
 ```package
 radio=radio
-microphone=microphone
-datalogger=datalogger
 ```
 
 ```template
@@ -15,16 +13,23 @@ function StartingSettings () {
     delaycounter = 3
     numberofcycles = 0
     totaltimeintervals = 0
+    armed = false
     RecordInitialAngle()
     Countdown()
 }
+// Shows the frequency in Hz (cycles per second).
+// Counting 5 crossings gives 4 full cycles, so the number of
+// cycles is one less than the number of crossings.
 function DisplayFrequency () {
     basic.clearScreen()
-    // If no vibrations were detected, the total-time-intervals will be = 0, in which case this displays a question mark, rather than produce a divide by zero math error.  If total-time-intervals are not zero then some vibrations were detected, and a frequency calculation can be displayed.
+    // With fewer than 2 crossings there is no time to divide by,
+    // so a question mark shows instead.
     if (totaltimeintervals == 0) {
         basic.showString("?")
     } else {
-        frequency = numberofcycles / totaltimeintervals
+        frequency = Math.round((numberofcycles - 1) / totaltimeintervals * 100) / 100
+        // Shows the label your class chose before the number.
+        basic.showString("f=")
         basic.showNumber(frequency)
     }
 }
@@ -37,6 +42,7 @@ function UpdatePastAngles () {
     _2pastangle = _1pastangle
     _1pastangle = currentangle
 }
+// Saves the resting angle and sends it to the receiver.
 function RecordInitialAngle () {
     CalculateTiltAngle()
     startangle = currentangle
@@ -47,33 +53,37 @@ function RecordInitialAngle () {
 function ShowRadioGroup () {
     basic.showString("T")
     basic.pause(1000)
-    basic.showNumber(myradiogroup)
+    basic.showNumber(myRadioGroup)
     basic.pause(1000)
     basic.showIcon(IconNames.Heart)
     go = false
 }
-// Shows my-radiogroup number on both micro:bits. This allows the user to check if they are on the same radio channel or now
+// Shows the radio group on both micro:bits, so you can check
+// they are on the same group.
 input.onButtonPressed(Button.AB, function () {
     radio.sendString("A+B")
     ShowRadioGroup()
 })
-// Checks if it is time to collect data for a peak
+// Counts each upward swing through the resting angle.
+// The stick must first swing at least 2 degrees below the resting
+// angle (armed), so small jitter at rest is not counted twice.
 function CycleChecker () {
-    // looks for enough vibration that the angle has changed by at least 3 degrees before it determines that the stick was deformed enough to count as vibrations having started
-    if (Math.abs(maxangle - minangle) > 2) {
-        if (currentangle >= startangle && _1pastangle < startangle) {
-            if (numberofcycles == 0) {
-                lastcycletime = currenttime
-                starttime = currenttime
-                maxstoptime = starttime + 10
-            } else if (numberofcycles >= 1) {
-                TimeIntervalTracker()
-            }
-            numberofcycles = numberofcycles + 1
+    if (currentangle <= startangle - 2) {
+        armed = true
+    }
+    if (armed && currentangle >= startangle) {
+        armed = false
+        if (numberofcycles == 0) {
+            lastcycletime = currenttime
+            starttime = currenttime
+            maxstoptime = starttime + 10
+        } else {
+            TimeIntervalTracker()
         }
+        numberofcycles = numberofcycles + 1
     }
 }
-// To detect whether buttons A, B, or A+B are pressed onteh other micro:bit
+// Lets buttons A, B or A+B on the other micro:bit start this one.
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "A") {
         open = false
@@ -91,28 +101,24 @@ input.onButtonPressed(Button.B, function () {
 })
 function CalculateTiltAngle () {
     currentroll = input.rotation(Rotation.Roll)
-    // shifts the default orientation of the micro:bit (facedown) to register as 90 degrees.
+    // Shifts the angle so the micro:bit lying face down reads 90 degrees.
     if (currentroll >= 0) {
         currentangle = currentroll - 90
-    } else if (currentroll < 0) {
+    } else {
         currentangle = currentroll + 270
     }
-    if (currentangle < minangle) {
-        minangle = currentangle
-    } else if (currentangle > maxangle) {
-        maxangle = currentangle
-    }
     sum3angles = currentangle + (_1pastangle + _2pastangle)
-    // Calculates the average of the current angle and the last two angles to the tenths place.
+    // Average of the current angle and the last two angles, to the tenths place.
     recentangleavg = Math.round(sum3angles * 10 / 3) / 10
 }
-// Tracks the time for every cycle to complete and adds it to total-elapsed time
+// Adds the time since the last crossing to the total time.
+// The total is the time from the first crossing to the last one.
 function TimeIntervalTracker () {
     interval = currenttime - lastcycletime
     totaltimeintervals = totaltimeintervals + interval
     lastcycletime = currenttime
 }
-// Runs countdown timer before data collection.
+// Counts down 3, 2, 1 before data collection. Release the stick at 1.
 function Countdown () {
     while (delaycounter > 0) {
         radio.sendString(convertToText(delaycounter))
@@ -123,7 +129,7 @@ function Countdown () {
     radio.sendString("+")
     basic.showString("+")
     basic.pause(500)
-    maxstoptime = currenttime + 10
+    maxstoptime = input.runningTime() / 1000 + 10
     radio.sendString("go")
     go = true
 }
@@ -135,8 +141,6 @@ let maxstoptime = 0
 let starttime = 0
 let currenttime = 0
 let lastcycletime = 0
-let minangle = 0
-let maxangle = 0
 let startangle = 0
 let currentangle = 0
 let _1pastangle = 0
@@ -146,11 +150,16 @@ let frequency = 0
 let totaltimeintervals = 0
 let numberofcycles = 0
 let delaycounter = 0
+let armed = false
 let go = false
-let myradiogroup = 0
-myradiogroup = 1
-radio.setGroup(myradiogroup)
+let myRadioGroup = 0
+// Set this to your station number. The receiver must use the same number.
+myRadioGroup = 1
+radio.setGroup(myRadioGroup)
 basic.showIcon(IconNames.Heart)
+// Collects angle data for 10 seconds after the first crossing
+// (or 10 seconds after the countdown if there is no crossing),
+// then shows the frequency.
 basic.forever(function () {
     currenttime = input.runningTime() / 1000
     if (go == true) {
@@ -161,7 +170,7 @@ basic.forever(function () {
             if (numberofcycles > 0 || open == true) {
                 radio.sendNumber(recentangleavg)
             }
-        } else if (currenttime > maxstoptime) {
+        } else {
             radio.sendString("stop")
             DisplayFrequency()
         }
@@ -171,6 +180,42 @@ basic.forever(function () {
 
 ## Lesson 8 - Tilt Sensor Transmitter
 
-This project has the code for **Tilt Sensor Transmitter**.
+This project has the code for **Tilt Sensor Transmitter**, with a label before the frequency. It is the answer key for the whole-class change in Lesson 8.
+
+## How to use the code
+
+- Set ``myRadioGroup`` to your station number before you download. The receiver micro:bit must use the same number.
+- Press **A** for a closed run or **B** for an open run. Release the stick at **1** in the countdown.
+- After 10 seconds of data, the micro:bit scrolls the label and then the frequency in Hz.
+
+## The class change
+
+In ``DisplayFrequency``, a ``||basic:show string||`` block shows a label before the ``||basic:show number||`` block.
+
+```blocks
+let frequency = 0
+let numberofcycles = 0
+let totaltimeintervals = 0
+function DisplayFrequency () {
+    basic.clearScreen()
+    if (totaltimeintervals == 0) {
+        basic.showString("?")
+    } else {
+        frequency = Math.round((numberofcycles - 1) / totaltimeintervals * 100) / 100
+        // @highlight
+        basic.showString("f=")
+        basic.showNumber(frequency)
+    }
+}
+```
+
+Change **f=** to the label your class chose.
+
+## Technical notes
+
+- This code is the same as the Lesson 7 transmitter. The only change is the label shown before the frequency.
+- ``CycleChecker`` counts each time the stick swings up through its resting angle. The stick must first swing at least 2 degrees below rest, so jitter is not counted twice.
+- The frequency is (crossings - 1) divided by the time between the first and last crossing, rounded to 2 decimal places.
+- Data is collected for 10 seconds after the first crossing. A **?** shows if fewer than 2 crossings were found.
 
 Click **Done**, then download the code to your micro:bit.

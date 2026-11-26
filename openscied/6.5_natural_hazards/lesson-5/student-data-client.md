@@ -68,4 +68,20 @@ status = "-"
 
 This project has the code for **Student Data Client**.
 
+## How to use the code
+
+This micro:bit listens to the buoy sensors and the teacher data hub. It does not have any button controls. Keep it connected to the computer by USB and open **Show data**.
+
+- At the start, it shows **+**.
+- When the hub sends **A** or **B**, it shows that letter and plays a tone.
+- When the hub sends **X**, it shows an X and plays a low tone.
+- When both sensors report that they have finished, it shows a check mark and plays a tone.
+
+## Technical notes
+
+- All micro:bits use radio group **1**.
+- The code is a copy of the teacher data hub without the buttons. It keeps the latest value from Sensor 0 and Sensor 1.
+- The code only graphs readings when its ``status`` variable is **A** or **B**. The radio letters from the hub do not change ``status``, so it stays **-** and nothing is sent to **Show data**. See the teacher data hub for the graph.
+- The check mark needs finish messages **1** and **2** from the sensors.
+
 Click **Done**, then download the code to your micro:bit.

@@ -2,7 +2,6 @@
 
 ```package
 radio=radio
-microphone=microphone
 openscied=github:Forward-Education/pxt-openscied#v1.1.0
 ```
 

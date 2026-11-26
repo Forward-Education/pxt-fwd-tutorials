@@ -44,7 +44,7 @@ basic.forever(function () {
         basic.showString("Li:" + opensciedModules.round(opensciedModules.light1.illuminance(), 1))
         basic.clearScreen()
     } else if (displaystate == "temp") {
-        basic.showString("F:" + opensciedModules.round(opensciedModules.bmeTemperature.readTemperature(opensciedEnums.TemperatureUnit.Fahrenheit), 1))
+        basic.showString("F:" + opensciedModules.round(opensciedModules.temperature1.readTemperature(opensciedEnums.TemperatureUnit.Fahrenheit), 1))
         basic.clearScreen()
     }
 })
@@ -63,5 +63,15 @@ When the micro:bit starts, it shows a menu that switches between a light icon an
 - Press **A+B** together to go back to the menu.
 
 The micro:bit finishes what is on the screen before it switches, so a button press can take a moment to show.
+
+## Technical notes
+
+The buttons only change the ``displaystate`` variable. One ``||basic:forever||`` loop checks that variable and decides what to show:
+
+- **menu**: the light icon and the **F** icon, half a second each.
+- **light**: the light sensor reading in lux, rounded to 1 decimal place, with the label **Li:**.
+- **temp**: the temperature in °F, rounded to 1 decimal place, with the label **F:**. Change ``Fahrenheit`` to ``Celsius`` in the block if you want °C.
+
+The sensor is read again each time the text starts to scroll, so each new scroll shows a fresh reading. This code does not save data or send it to the computer.
 
 Click **Done**, then download the code to your micro:bit.

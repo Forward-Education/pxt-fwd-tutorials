@@ -137,4 +137,24 @@ basic.forever(function () {
 
 This project has the code for **Buoy Sensor**.
 
+## How to use the code
+
+This micro:bit is a buoy sensor. It uses the compass (magnetometer) to measure how far a magnet on the moving water is from the micro:bit. The teacher data hub controls it by radio.
+
+1. Before you download, set ``sensorid`` in ``||basic:on start||``. Use **0** for the first sensor and **1** for the second.
+2. At the start, the sensor plays a tone, shows its ID and saves its starting position. It then starts sending readings.
+3. When the hub sends **A**, the sensor shows **A**, plays a tone, shows its ID, saves a new starting position and sends readings until the hub stops it.
+4. When the hub sends **B**, the sensor does the same, but stops on its own after a wave crest passes. It then plays a tone, shows a check mark and tells the hub it has finished.
+5. When the hub sends **X**, the sensor shows an X and plays a low tone.
+
+Keep the water and magnet still when a mode starts, because that is the starting position.
+
+## Technical notes
+
+- All micro:bits use radio group **1**.
+- The sensor reads the magnetic force on the Y axis. It takes the square root and multiplies by 1000, keeping the sign, so the number changes more evenly as the magnet moves. It then subtracts the starting value, so 0 means "at rest".
+- The forever loop sends a reading as fast as it can, as a radio value named after ``sensorid``.
+- In mode B, a crest starts when the reading goes above 800 and ends when it drops back to 0 or below. The sensor then stops sending and sends its ``sensorid`` as a radio number.
+- The code also tracks the trough (below -500) and the highest and lowest values, but these are not used to stop or send data.
+
 Click **Done**, then download the code to your micro:bit.
