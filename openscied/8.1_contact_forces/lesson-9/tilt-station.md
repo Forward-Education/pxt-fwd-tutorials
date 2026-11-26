@@ -40,6 +40,12 @@ basic.forever(function () {
 
 This project has the code for the **Tilt Station**.
 
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## How to use the code
 
 - Press **A** to show the tilt as a bar graph. A full bar is 90 degrees (standing straight up).

@@ -53,6 +53,15 @@ loops.everyInterval(1000, function () {
 
 This project has the code for **Sensor Station B (Humidity)**.
 
+## Before you start
+
+- Plug the micro:bit into the breakout board.
+- Plug the module(s) into the breakout board.
+- Switch the breakout board on. A green light shows when it has power.
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## How to use the code
 
 - Press **A** to start. A check mark shows, the old data log is erased, and the micro:bit starts saving a humidity reading every second. The reading also scrolls on the screen.

@@ -59,6 +59,15 @@ This system uses **two micro:bits**. This one, the **sender**, reads the soil an
 
 Save a copy of your project before you start.
 
+## Before you start
+
+- Plug the micro:bit into the breakout board.
+- Plug the module(s) into the breakout board.
+- Switch the breakout board on. A green light shows when it has power.
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## Set the station number
 
 Find ``stationNumber`` in ``||basic:on start||``.

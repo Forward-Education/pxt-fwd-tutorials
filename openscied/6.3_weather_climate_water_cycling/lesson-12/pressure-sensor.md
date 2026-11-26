@@ -34,6 +34,15 @@ loops.everyInterval(1000, function () {
 
 This project has the code for **Pressure Sensor**.
 
+## Before you start
+
+- Plug the micro:bit into the breakout board.
+- Plug the module(s) into the breakout board.
+- Switch the breakout board on. A green light shows when it has power.
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## How to use the code
 
 When the micro:bit starts, it shows a **P** for pressure. Then it scrolls the air pressure reading over and over and sends a reading to the receiver every second.

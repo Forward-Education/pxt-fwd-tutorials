@@ -2,7 +2,6 @@
 
 ```package
 radio=radio
-microphone=microphone
 ```
 
 ```template
@@ -67,6 +66,12 @@ status = "-"
 ## Lesson 5 - Student Data Client
 
 This project has the code for **Student Data Client**.
+
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
 
 ## How to use the code
 

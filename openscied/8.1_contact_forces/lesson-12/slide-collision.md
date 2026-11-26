@@ -69,6 +69,15 @@ basic.forever(function () {
 
 This project has the code for the **Slider Force Sensor System**. It is the sample program (answer key) for the **Slider Force Sensor** create tutorial.
 
+## Before you start
+
+- Plug the micro:bit into the breakout board.
+- Plug the module(s) into the breakout board.
+- Switch the breakout board on. A green light shows when it has power.
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## How to use the code
 
 - Press **A** for setup mode. Watch the LCD: line 1 shows how far the slider has moved (%) since you pressed **A**, and line 2 shows the peak (biggest movement).

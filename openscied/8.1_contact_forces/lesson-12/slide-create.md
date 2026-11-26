@@ -47,6 +47,15 @@ The system has two modes:
 
 The buttons already switch modes. **A+B** shows a dot while the system waits.
 
+## Before you start
+
+- Plug the micro:bit into the breakout board.
+- Plug the module(s) into the breakout board.
+- Switch the breakout board on. A green light shows when it has power.
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## Plan your program
 
 Before you code, draw a flowchart with your group.

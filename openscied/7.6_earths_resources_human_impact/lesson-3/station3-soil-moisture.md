@@ -70,6 +70,15 @@ This project has the code for **Station 3 (Soil moisture)**. Set it up before cl
 - Press **B** to show a face: happy for wet soil, neutral in between, sad for dry soil.
 - Press **A+B** to show the station number, stop saving readings and erase the data log.
 
+## Before you start
+
+- Plug the micro:bit into the breakout board.
+- Plug the module(s) into the breakout board.
+- Switch the breakout board on. A green light shows when it has power.
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## Setup
 
 Connect the soil moisture sensor and push its prongs into the soil.

@@ -56,7 +56,13 @@ basic.forever(function () {
 
 The micro:bit's accelerometer can measure shaking, like the shaking during an earthquake. In this tutorial you will test a warning system, read how it works, and then change it to give **three warning levels**.
 
-The starter code is already in the workspace. Save a copy of your project before you start.
+The starter code is already in the workspace.
+
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
 
 ## Use the code
 
@@ -146,8 +152,4 @@ Download your code, press **B**, and try gentle, medium and hard shakes.
 - Every 0.5 seconds, the screen clears and the hardest shake is checked. A letter takes time to scroll, so a warning can stay on the screen a little longer than 0.5 seconds.
 - If two of your ranges overlap, both letters can show, one after the other.
 
-## Share your project
-
-Share your project link. You will use it again in Lesson 7.
-
-Click **Done** when you have shared your project.
+Click **Done**, then download the code to your micro:bit.

@@ -64,6 +64,12 @@ basic.forever(function () {
 
 This project has the code for **Tsunameter (Slides Version)**.
 
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## How to use the code
 
 This micro:bit is a tsunameter. It uses the compass (magnetometer) to measure how high a magnet on the water rises. Keep it connected to the computer by USB and open **Show data** to graph the height.

@@ -137,6 +137,12 @@ basic.forever(function () {
 
 This project has the code for **Buoy Sensor**.
 
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## How to use the code
 
 This micro:bit is a buoy sensor. It uses the compass (magnetometer) to measure how far a magnet on the moving water is from the micro:bit. The teacher data hub controls it by radio.

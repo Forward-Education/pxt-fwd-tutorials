@@ -84,6 +84,15 @@ This project has the **Combined Sensor** code, one micro:bit per group, for Day 
 
 This code uses the logo, so it needs a **micro:bit V2**.
 
+## Before you start
+
+- Plug the micro:bit into the breakout board.
+- Plug the module(s) into the breakout board.
+- Switch the breakout board on. A green light shows when it has power.
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## Setup
 
 Connect the BME280 sensor and the soil moisture sensor to the breakout board. Push the soil moisture prongs into the soil.

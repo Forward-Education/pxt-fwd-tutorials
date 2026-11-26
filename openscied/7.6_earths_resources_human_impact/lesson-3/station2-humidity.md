@@ -67,6 +67,15 @@ This project has the code for **Station 2 (Absolute humidity)**. Set it up befor
 - Press **B** to hear it as a sound. More humid air plays a higher, louder tone.
 - Press **A+B** to show the station number, stop saving readings and erase the data log.
 
+## Before you start
+
+- Plug the micro:bit into the breakout board.
+- Plug the module(s) into the breakout board.
+- Switch the breakout board on. A green light shows when it has power.
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## Setup
 
 Connect the BME280 sensor to the breakout board.

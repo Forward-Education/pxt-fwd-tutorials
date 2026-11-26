@@ -62,6 +62,12 @@ basic.forever(function () {
 
 This project has the code for the **Accelerometer Force Sensor System**. It is the sample program (answer key) for the **Accelerometer Force Sensor** create tutorial.
 
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## How to use the code
 
 - Press **A** for setup mode. The screen scrolls the biggest reading (mg) since you pressed **A**.

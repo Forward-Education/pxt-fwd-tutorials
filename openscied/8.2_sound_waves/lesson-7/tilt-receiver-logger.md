@@ -79,6 +79,12 @@ basic.showIcon(IconNames.Heart)
 
 This project has the code for **Tilt Sensor Receiver and Data Logger**. It goes on the micro:bit connected to the computer by USB.
 
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## How to use the code
 
 - Set ``myRadioGroup`` to your station number before you download. The transmitter must use the same number.

@@ -36,6 +36,12 @@ The micro:bit has a light sensor in its screen. In this tutorial you will use li
 
 The starter code is already in the workspace. Save a copy of your project before you start.
 
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## Use the code
 
 Download the code to your micro:bit.

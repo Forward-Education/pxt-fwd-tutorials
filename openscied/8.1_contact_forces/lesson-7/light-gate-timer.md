@@ -80,6 +80,15 @@ basic.forever(function () {
 
 This project has the code for the **Light Gate Timer**. A flashlight shines on the solar sensor. When an object passes between them, its shadow starts the timer, and when the light comes back the timer stops. The LCD shows the time in seconds.
 
+## Before you start
+
+- Plug the micro:bit into the breakout board.
+- Plug the module(s) into the breakout board.
+- Switch the breakout board on. A green light shows when it has power.
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## Set up the hardware
 
 Connect the **solar sensor** and the **LCD** to the micro:bit. Point a flashlight at the solar sensor.

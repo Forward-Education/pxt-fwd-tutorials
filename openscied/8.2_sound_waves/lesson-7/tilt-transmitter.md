@@ -180,6 +180,12 @@ basic.forever(function () {
 
 This project has the code for **Tilt Sensor Transmitter**. It goes on the micro:bit taped to the vibrating stick.
 
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## How to use the code
 
 - Set ``myRadioGroup`` to your station number before you download. The receiver micro:bit must use the same number.

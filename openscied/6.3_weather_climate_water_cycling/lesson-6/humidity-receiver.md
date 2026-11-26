@@ -73,6 +73,12 @@ loops.everyInterval(1000, function () {
 
 This tutorial sets up the **3 receivers**, one for each of Stations 3, 4 and 5. Each receiver is plugged into a computer and saves both sensors' readings, so you can graph them in **Show data**.
 
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## Station number
 
 At the top of ``||basic:on start||`` is ``stationnumber``. It is the radio group, so it must match the two senders at that station.
@@ -92,11 +98,7 @@ Pressing **A** again erases the saved data, so save your data before you start a
 
 Set ``stationnumber`` and download. Repeat for each station.
 
-| Station | stationnumber |
-| --- | --- |
-| Station 3 | 3 |
-| Station 4 | 4 |
-| Station 5 | 5 |
+For example, the receiver for Station 4 uses ``stationnumber`` 4.
 
 **Check:** when it starts, the micro:bit shows the station number. Pressing **A** shows a plus sign, and **Show data** shows two graphs.
 

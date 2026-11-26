@@ -70,6 +70,12 @@ status = "-"
 
 This project has the code for **Teacher Data Hub**.
 
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## How to use the code
 
 This micro:bit controls the buoy sensors and collects their data. Keep it connected to the computer by USB and open **Show data**.

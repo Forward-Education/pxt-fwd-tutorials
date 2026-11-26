@@ -96,6 +96,12 @@ This project has the code for the **Carbon Dice Game**. Each student's micro:bit
 
 This code uses the logo, so it needs a **micro:bit V2**.
 
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## Choose a reservoir
 
 Press a button to put the carbon in its starting reservoir:

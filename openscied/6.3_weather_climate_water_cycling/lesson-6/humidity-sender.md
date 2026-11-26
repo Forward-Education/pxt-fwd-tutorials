@@ -53,6 +53,15 @@ This tutorial sets up the **6 humidity senders** for Stations 3, 4 and 5. Each s
 
 You will use the same code for all 6 micro:bits and only change two numbers.
 
+## Before you start
+
+- Plug the micro:bit into the breakout board.
+- Plug the module(s) into the breakout board.
+- Switch the breakout board on. A green light shows when it has power.
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## Setup
 
 Put a BME280 sensor inside each humidity hood, with the cable through the cap to the breakout board.
@@ -73,14 +82,10 @@ At the top of ``||basic:on start||`` are two numbers:
 
 Set the two numbers to match the sticky note, then download. Repeat for all 6.
 
-| Sticky note | stationnumber | sensornumber |
-| --- | --- | --- |
-| Station 3, Sensor 1 | 3 | 1 |
-| Station 3, Sensor 2 | 3 | 2 |
-| Station 4, Sensor 1 | 4 | 1 |
-| Station 4, Sensor 2 | 4 | 2 |
-| Station 5, Sensor 1 | 5 | 1 |
-| Station 5, Sensor 2 | 5 | 2 |
+- ``stationnumber``: the station on the sticky note (3, 4 or 5).
+- ``sensornumber``: the sensor on the sticky note (1 or 2).
+
+For example, the sticky note **Station 4, Sensor 2** means ``stationnumber`` 4 and ``sensornumber`` 2.
 
 **Check:** when it starts, the micro:bit shows the station number. Pressing **A** shows **H1** or **H2**.
 

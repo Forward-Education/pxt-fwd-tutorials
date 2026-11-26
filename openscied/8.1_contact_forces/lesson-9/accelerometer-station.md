@@ -47,6 +47,12 @@ basic.forever(function () {
 
 This project has the code for the **Accelerometer Station**.
 
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## How to use the code
 
 - Press **A** to show the acceleration on the **X** axis (left and right) as a bar graph.

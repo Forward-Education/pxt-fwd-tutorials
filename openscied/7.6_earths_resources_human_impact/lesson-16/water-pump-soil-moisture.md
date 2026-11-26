@@ -53,6 +53,15 @@ In this tutorial you will read how an automatic watering system works, and then 
 
 The starter code is already in the workspace. Save a copy of your project before you start.
 
+## Before you start
+
+- Plug the micro:bit into the breakout board.
+- Plug the module(s) into the breakout board.
+- Switch the breakout board on. A green light shows when it has power.
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## Use the code
 
 Connect the soil moisture sensor and the water pump. Download the code and keep the micro:bit connected by USB.

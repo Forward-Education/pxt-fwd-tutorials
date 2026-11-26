@@ -182,6 +182,12 @@ basic.forever(function () {
 
 This project has the code for **Tilt Sensor Transmitter**, with a label before the frequency. It is the answer key for the whole-class change in Lesson 8.
 
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## How to use the code
 
 - Set ``myRadioGroup`` to your station number before you download. The receiver micro:bit must use the same number.

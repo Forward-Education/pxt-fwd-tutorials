@@ -60,6 +60,15 @@ This project has the code for **Station 1 (Temperature)**. Set it up before clas
 - Press **B** to show the temperature as a number, rounded to 1 decimal place.
 - Press **A+B** to show the station number, stop saving readings and erase the data log.
 
+## Before you start
+
+- Plug the micro:bit into the breakout board.
+- Plug the module(s) into the breakout board.
+- Switch the breakout board on. A green light shows when it has power.
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## Setup
 
 Connect the BME280 sensor to the breakout board.

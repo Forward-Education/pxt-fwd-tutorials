@@ -26,6 +26,12 @@ basic.showIcon(IconNames.Yes)
 
 This project has the code for **Radio Receiving**.
 
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
+
 ## How to use the code
 
 This micro:bit receives readings by radio from a sensor micro:bit. Keep it connected to the computer by USB and open **Show data** to graph the readings.

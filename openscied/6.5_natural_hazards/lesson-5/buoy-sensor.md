@@ -2,7 +2,6 @@
 
 ```package
 radio=radio
-microphone=microphone
 openscied=github:Forward-Education/pxt-openscied#v1.1.0
 ```
 
@@ -136,6 +135,12 @@ basic.forever(function () {
 ## Lesson 5 - Buoy Sensor
 
 This project has the code for **Buoy Sensor**.
+
+## Before you start
+
+- Plug the micro:bit into the computer with a USB cable.
+- To connect to the micro:bit you must be using Google Chrome.
+- This code may require a V2 micro:bit.
 
 ## How to use the code
 
