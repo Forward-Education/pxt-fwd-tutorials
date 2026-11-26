@@ -53,7 +53,14 @@ loops.everyInterval(1000, function () {
 
 This project has the code for **Sensor Station B (Humidity)**.
 
-## How the code works
+## How to use the code
+
+- Press **A** to start. A check mark shows, the old data log is erased, and the micro:bit starts saving a humidity reading every second. The reading also scrolls on the screen.
+- Press **A+B** together to stop. A happy face shows and the micro:bit stops saving readings.
+
+Pressing **A** again erases the saved data, so save your data before you start a new run.
+
+## Technical notes
 
 The code uses two loops that run at the same time:
 
