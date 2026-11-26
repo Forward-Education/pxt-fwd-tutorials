@@ -28,13 +28,21 @@ input.onButtonPressed(Button.B, function () {
     basic.showIcon(IconNames.Happy)
 })
 // Remembers the latest reading from each sensor.
+// While receiving, a corner light blinks for each reading:
+// top-left for sensor 1, top-right for sensor 2.
 radio.onReceivedValue(function (name, value) {
     if (name == "sensor 1") {
         sensor1 = value
         got1 = true
+        if (receiving) {
+            led.toggle(0, 0)
+        }
     } else if (name == "sensor 2") {
         sensor2 = value
         got2 = true
+        if (receiving) {
+            led.toggle(4, 0)
+        }
     }
 })
 let sensor2 = 0
@@ -71,6 +79,8 @@ When the micro:bit starts, it shows **R** for receiver. Start both sensors first
 
 - Press **A** to start. A check mark shows, the old data log is erased, and a plus sign shows while the micro:bit receives. Once both sensors have sent a reading, it saves one row with both readings every second.
 - Press **B** to stop saving. A happy face shows.
+
+While the micro:bit receives, the top-left light blinks for sensor 1 and the top-right light blinks for sensor 2. If a corner does not blink, check that sensor.
 
 Pressing **A** again erases the saved data, so save your data before you start a new run.
 
