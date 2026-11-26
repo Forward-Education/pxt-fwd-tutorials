@@ -30,7 +30,7 @@ basic.forever(function () {
 })
 ```
 
-## Lesson 3 - Light-Activated Sound Source @showdialog
+## Lesson 3 - Light-Activated Sound Source
 
 The micro:bit has a light sensor in its screen. In this tutorial you will use light to turn sound on and off, and then change the code so it works well in your classroom.
 

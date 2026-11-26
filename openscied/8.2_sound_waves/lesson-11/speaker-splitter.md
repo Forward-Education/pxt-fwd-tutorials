@@ -67,7 +67,7 @@ let v = 0
 basic.showIcon(IconNames.Heart)
 ```
 
-## Lesson 11 - Speaker Splitter @showdialog
+## Lesson 11 - Speaker Splitter
 
 A speaker system can split sound so that low pitches go to one speaker and high pitches go to another. In this tutorial you will play sound on two speakers, and then change the code so each pitch goes to the right speaker.
 

@@ -36,7 +36,7 @@ basic.forever(function () {
 })
 ```
 
-## Lesson 12 - Slider Force Sensor @showdialog
+## Lesson 12 - Slider Force Sensor
 
 In this tutorial you will program the **slider** to sense a collision and tell you if it was **small** or **large**. A collision pushes the slider, and a bigger collision pushes it further.
 

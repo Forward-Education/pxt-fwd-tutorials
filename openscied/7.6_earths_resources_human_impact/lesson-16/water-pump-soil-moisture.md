@@ -47,7 +47,7 @@ basic.forever(function () {
 })
 ```
 
-## Lesson 16 - Water Pump and Soil Moisture Sensor @showdialog
+## Lesson 16 - Water Pump and Soil Moisture Sensor
 
 In this tutorial you will read how an automatic watering system works, and then change it for your design.
 

@@ -47,7 +47,7 @@ loops.everyInterval(1000, function () {
 })
 ```
 
-## Lesson 6 - Humidity Sender @showdialog
+## Lesson 6 - Humidity Sender
 
 This tutorial sets up the **6 humidity senders** for Stations 3, 4 and 5. Each station has two senders that send absolute humidity (g/m3) by radio to the station's receiver.
 

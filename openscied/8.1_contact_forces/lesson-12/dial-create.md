@@ -36,7 +36,7 @@ basic.forever(function () {
 })
 ```
 
-## Lesson 12 - Rotary Dial Force Sensor @showdialog
+## Lesson 12 - Rotary Dial Force Sensor
 
 In this tutorial you will program the **rotary dial** to sense a collision and tell you if it was **small** or **large**. A collision turns the dial, and a bigger collision turns it more.
 

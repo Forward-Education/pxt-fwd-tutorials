@@ -59,7 +59,7 @@ loops.everyInterval(1000, function () {
 })
 ```
 
-## Lesson 3 - Station 2 Humidity Sensor @showdialog
+## Lesson 3 - Station 2 Humidity Sensor
 
 This project has the code for **Station 2 (Absolute humidity)**. Set it up before class.
 

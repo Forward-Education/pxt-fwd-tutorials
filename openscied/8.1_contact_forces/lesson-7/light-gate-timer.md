@@ -76,7 +76,7 @@ basic.forever(function () {
 })
 ```
 
-## Lesson 7 - Light Gate Timer @showdialog
+## Lesson 7 - Light Gate Timer
 
 This project has the code for the **Light Gate Timer**. A flashlight shines on the solar sensor. When an object passes between them, its shadow starts the timer, and when the light comes back the timer stops. The LCD shows the time in seconds.
 

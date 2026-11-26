@@ -52,7 +52,7 @@ basic.forever(function () {
 })
 ```
 
-## Lesson 3 - Accelerometer Warning @showdialog
+## Lesson 3 - Accelerometer Warning
 
 The micro:bit's accelerometer can measure shaking, like the shaking during an earthquake. In this tutorial you will test a warning system, read how it works, and then change it to give **three warning levels**.
 

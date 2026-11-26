@@ -35,7 +35,7 @@ basic.showNumber(myRadioGroup)
 music.setVolume(127)
 ```
 
-## Lesson 3 - Button-Activated Sound Source @showdialog
+## Lesson 3 - Button-Activated Sound Source
 
 In this tutorial you will use two micro:bits as sound sources. One micro:bit can make the other one play a sound by radio. Then you will change the code for your group.
 

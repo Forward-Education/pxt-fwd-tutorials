@@ -78,7 +78,7 @@ loops.everyInterval(1000, function () {
 })
 ```
 
-## Lesson 3 - Combined Sensor Code @showdialog
+## Lesson 3 - Combined Sensor Code
 
 This project has the **Combined Sensor** code, one micro:bit per group, for Day 2. It saves temperature (°C), absolute humidity (g/m3) and soil moisture (%) together, every second. Set it up before class.
 

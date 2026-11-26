@@ -34,7 +34,7 @@ basic.forever(function () {
 })
 ```
 
-## Lesson 12 - Accelerometer Force Sensor @showdialog
+## Lesson 12 - Accelerometer Force Sensor
 
 In this tutorial you will program the micro:bit's **accelerometer** to sense a collision and tell you if it was **small** or **large**.
 

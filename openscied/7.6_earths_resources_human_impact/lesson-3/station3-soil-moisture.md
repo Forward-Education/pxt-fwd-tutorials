@@ -62,7 +62,7 @@ loops.everyInterval(1000, function () {
 })
 ```
 
-## Lesson 3 - Station 3 Soil Moisture Sensor @showdialog
+## Lesson 3 - Station 3 Soil Moisture Sensor
 
 This project has the code for **Station 3 (Soil moisture)**. Set it up before class.
 

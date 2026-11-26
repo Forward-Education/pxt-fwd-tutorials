@@ -69,7 +69,7 @@ loops.everyInterval(1000, function () {
 })
 ```
 
-## Lesson 6 - Humidity Receiver @showdialog
+## Lesson 6 - Humidity Receiver
 
 This tutorial sets up the **3 receivers**, one for each of Stations 3, 4 and 5. Each receiver is plugged into a computer and saves both sensors' readings, so you can graph them in **Show data**.
 

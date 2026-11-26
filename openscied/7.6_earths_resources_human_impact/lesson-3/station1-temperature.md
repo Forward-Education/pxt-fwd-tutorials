@@ -52,7 +52,7 @@ loops.everyInterval(1000, function () {
 })
 ```
 
-## Lesson 3 - Station 1 Temperature Sensor @showdialog
+## Lesson 3 - Station 1 Temperature Sensor
 
 This project has the code for **Station 1 (Temperature)**. Set it up before class.
 

@@ -24,7 +24,7 @@ radio.setGroup(stationNumber)
 basic.showNumber(stationNumber)
 ```
 
-## Lesson 16 - Water Pump Receiver @showdialog
+## Lesson 16 - Water Pump Receiver
 
 This micro:bit is the **receiver**. It listens for the sender's radio message and runs the pump.
 

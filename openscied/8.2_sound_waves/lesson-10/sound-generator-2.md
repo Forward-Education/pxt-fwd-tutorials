@@ -66,7 +66,7 @@ music.setBuiltInSpeakerEnabled(true)
 basic.showIcon(IconNames.Heart)
 ```
 
-## Lesson 10 - Sound Generator 2 @showdialog
+## Lesson 10 - Sound Generator 2
 
 In this tutorial you will use the micro:bit to make sounds with different **volumes** and **frequencies**. Then you will change the code to make your own sounds.
 

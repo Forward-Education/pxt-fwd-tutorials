@@ -53,7 +53,7 @@ basic.forever(function () {
 })
 ```
 
-## Lesson 16 - Soil Moisture Radio Sender @showdialog
+## Lesson 16 - Soil Moisture Radio Sender
 
 This system uses **two micro:bits**. This one, the **sender**, reads the soil and sends a message by radio. The **receiver** runs the pump.
 

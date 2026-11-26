@@ -90,7 +90,7 @@ busy = false
 basic.showString("?")
 ```
 
-## Lesson 11 - Carbon Dice Game @showdialog
+## Lesson 11 - Carbon Dice Game
 
 This project has the code for the **Carbon Dice Game**. Each student's micro:bit is a carbon atom that moves between reservoirs. Set it up before class.
 
