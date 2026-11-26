@@ -8,9 +8,6 @@ openscied=github:Forward-Education/pxt-openscied#v1.1.0
 ```
 
 ```template
-function calcAbsHumidity () {
-    abshumidityrounded = opensciedModules.round(opensciedModules.bmeHumidity.absoluteHumidity(), 2)
-}
 input.onButtonPressed(Button.A, function () {
     basic.showIcon(IconNames.Yes)
     basic.pause(500)
@@ -26,25 +23,28 @@ input.onButtonPressed(Button.AB, function () {
     basic.showIcon(IconNames.Happy)
 })
 let inputcurrent = 0
-let abshumidityrounded = 0
 let columnname = ""
 let scrolldisplay = false
 let logging = false
 logging = false
 scrolldisplay = false
 columnname = "Abs. humidity (g/m3)"
+datalogger.mirrorToSerial(true)
 basic.showString("H")
+// Reads the sensor and scrolls the value on the screen.
+// Scrolling text takes a few seconds, so it gets its own loop
+// to keep it from slowing down the data logging.
 basic.forever(function () {
-    calcAbsHumidity()
-    inputcurrent = abshumidityrounded
-    if (logging == true) {
-        datalogger.log(datalogger.createCV(columnname, inputcurrent))
-        datalogger.mirrorToSerial(true)
-    }
-    if (scrolldisplay == true) {
-        basic.showString("H:")
-        basic.showString("" + (inputcurrent))
+    inputcurrent = opensciedModules.round(opensciedModules.bmeHumidity.absoluteHumidity(), 2)
+    if (scrolldisplay) {
+        basic.showString("H:" + inputcurrent)
         basic.clearScreen()
+    }
+})
+// Saves one reading every second, so the data is evenly spaced over time.
+loops.everyInterval(1000, function () {
+    if (logging) {
+        datalogger.log(datalogger.createCV(columnname, inputcurrent))
     }
 })
 ```
@@ -52,5 +52,14 @@ basic.forever(function () {
 ## Lesson 3 - Sensor Station B (Humidity)
 
 This project has the code for **Sensor Station B (Humidity)**.
+
+## How the code works
+
+The code uses two loops that run at the same time:
+
+- The ``||basic:forever||`` loop reads the humidity sensor and scrolls the value on the screen.
+- The ``||loops:every 1000 ms||`` loop saves one reading to the data log every second.
+
+Scrolling text on the micro:bit takes a few seconds. If both jobs were in the same loop, the data would only be saved after each scroll finished, and the readings would not be evenly spaced. Keeping them in separate loops means you get one reading every second, no matter what the screen is doing.
 
 Click **Done**, then download the code to your micro:bit.

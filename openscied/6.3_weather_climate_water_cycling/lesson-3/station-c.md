@@ -23,14 +23,13 @@ input.onButtonPressed(Button.AB, function () {
     basic.showIcon(IconNames.Happy)
 })
 let output = 0
-let luxrounded = 0
-let inputcurrent = 0
 let columnname = ""
 let scrolldisplay = false
 let logging = false
 logging = false
 scrolldisplay = false
 columnname = "Light intensity (lux)"
+datalogger.mirrorToSerial(true)
 basic.showLeds(`
     # . . . #
     # . . . .
@@ -38,18 +37,20 @@ basic.showLeds(`
     # . . . #
     # # # . #
     `)
+// Reads the sensor and scrolls the value on the screen.
+// Scrolling text takes a few seconds, so it gets its own loop
+// to keep it from slowing down the data logging.
 basic.forever(function () {
-    inputcurrent = opensciedModules.light1.illuminance()
-    luxrounded = opensciedModules.round(inputcurrent, 1)
-    output = luxrounded
-    if (logging == true) {
-        datalogger.log(datalogger.createCV(columnname, output))
-        datalogger.mirrorToSerial(true)
-    }
-    if (scrolldisplay == true) {
-        basic.showString("Li:")
-        basic.showString("" + (output))
+    output = opensciedModules.round(opensciedModules.light1.illuminance(), 1)
+    if (scrolldisplay) {
+        basic.showString("Li:" + output)
         basic.clearScreen()
+    }
+})
+// Saves one reading every second, so the data is evenly spaced over time.
+loops.everyInterval(1000, function () {
+    if (logging) {
+        datalogger.log(datalogger.createCV(columnname, output))
     }
 })
 ```
@@ -57,5 +58,14 @@ basic.forever(function () {
 ## Lesson 3 - Sensor Station C (Light)
 
 This project has the code for **Sensor Station C (Light)**.
+
+## How the code works
+
+The code uses two loops that run at the same time:
+
+- The ``||basic:forever||`` loop reads the light sensor and scrolls the value on the screen.
+- The ``||loops:every 1000 ms||`` loop saves one reading to the data log every second.
+
+Scrolling text on the micro:bit takes a few seconds. If both jobs were in the same loop, the data would only be saved after each scroll finished, and the readings would not be evenly spaced. Keeping them in separate loops means you get one reading every second, no matter what the screen is doing.
 
 Click **Done**, then download the code to your micro:bit.
